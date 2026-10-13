@@ -696,6 +696,7 @@ img {
 .skill-pill.skill-github     { background: rgba(255, 255, 255, 0.07); border-color: rgba(255, 255, 255, 0.2); }
 .skill-pill.skill-npm        { background: rgba(203, 56, 55, 0.12);   border-color: rgba(203, 56, 55, 0.35); }
 .skill-pill.skill-bun        { background: rgba(251, 191, 36, 0.12);  border-color: rgba(251, 191, 36, 0.35); }
+.skill-pill.skill-kotlin     { background: rgba(127, 82, 255, 0.12);  border-color: rgba(127, 82, 255, 0.35); }
 .skill-pill.skill-github i,
 .skill-pill.skill-nextjs i   { filter: brightness(0) invert(1); }
 

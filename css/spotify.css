@@ -25,6 +25,47 @@
 .spotify-open-btn:hover { opacity: 0.85; }
 .spotify-open-btn svg { flex-shrink: 0; }
 
+/* AUTOPLAY PLAYER */
+.sp-autoplay-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.sp-autoplay-title {
+  margin: 0 0 4px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+}
+.sp-autoplay-status {
+  margin: 0 0 10px;
+  color: var(--text-soft);
+  font-size: 12px;
+}
+.sp-autoplay-button {
+  padding: 7px 14px;
+  border: 0;
+  border-radius: 20px;
+  background: #1DB954;
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sp-autoplay-button:disabled { opacity: 0.55; cursor: wait; }
+.sp-autoplay-button[hidden] { display: none; }
+#sp-autoplay-player { width: 100%; min-width: 0; }
+@media (max-width: 640px) {
+  .sp-autoplay-card { grid-template-columns: 1fr; }
+}
+
 /* NOW PLAYING */
 .sp-now-playing {
   display: flex;
@@ -241,6 +282,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.sp-track-lyrics {
+  margin: 4px 0 0;
+  color: var(--text-dim);
+  font-size: 11px;
+  line-height: 1.4;
 }
 .sp-track-dur { font-size: 11px; color: var(--text-dim); flex-shrink: 0; }
 .sp-track-heart { font-size: 13px; color: #1DB954; flex-shrink: 0; }

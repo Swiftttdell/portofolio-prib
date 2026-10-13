@@ -3,8 +3,8 @@ const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 const REFRESH_TOKEN = process.env.SPOTIFY_REFRESH_TOKEN;
 
 const BASIC = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString("base64");
-const TOKEN_URL     = "https://accounts.spotify.com/api/token";
-const API_BASE      = "https://api.spotify.com/v1";
+const TOKEN_URL = "https://accounts.spotify.com/api/token";
+const API_BASE  = "https://api.spotify.com/v1";
 
 async function getAccessToken() {
   const res = await fetch(TOKEN_URL, {
@@ -51,6 +51,45 @@ module.exports = async function handler(req, res) {
 
     const { access_token } = await getAccessToken();
 
+    if (req.query.artistIds) {
+      const artistIds = [...new Set(String(req.query.artistIds).split(","))];
+      if (
+        artistIds.length > 20
+        || artistIds.some((id) => !/^[A-Za-z0-9]{22}$/.test(id))
+      ) {
+        return res.status(400).json({ error: "Daftar ID artis tidak valid." });
+      }
+
+      const artistTrackResults = await Promise.all(artistIds.map(async (artistId) => {
+        const response = await fetch(
+          `${API_BASE}/artists/${artistId}/top-tracks?market=ID`,
+          { headers: { Authorization: `Bearer ${access_token}` } },
+        );
+        if (!response.ok) {
+          throw new Error(`Spotify artist tracks error ${response.status}.`);
+        }
+        return response.json();
+      }));
+
+      const artistTracks = artistTrackResults
+        .flatMap((result) => result.tracks || [])
+        .filter((track) => track.id && track.is_playable !== false)
+        .map((track) => ({
+          id: track.id,
+          uri: track.uri,
+          title: track.name,
+          artist: track.artists.map((artist) => artist.name).join(", "),
+          url: track.external_urls.spotify,
+          duration: track.duration_ms,
+        }));
+      const uniqueArtistTracks = [...new Map(
+        artistTracks.map((track) => [track.id, track]),
+      ).values()];
+
+      res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate=86400");
+      return res.status(200).json({ artistTracks: uniqueArtistTracks });
+    }
+
     const [
       profile,
       nowPlaying,
@@ -70,27 +109,27 @@ module.exports = async function handler(req, res) {
     ]);
 
     // Now Playing atau fallback ke recently played
-    let nowPlayingData = null;
-    if (nowPlaying && nowPlaying.is_playing && nowPlaying.item) {
+let nowPlayingData = null;
+    if (nowPlaying && nowPlaying.item) {
       nowPlayingData = {
-        isPlaying: true,
-        title:     nowPlaying.item.name,
-        artist:    nowPlaying.item.artists.map((a) => a.name).join(", "),
-        album:     nowPlaying.item.album.name,
-        image:     nowPlaying.item.album.images[1]?.url || null,
-        url:       nowPlaying.item.external_urls.spotify,
-        progress:  nowPlaying.progress_ms,
-        duration:  nowPlaying.item.duration_ms,
+        isPlaying: !!nowPlaying.is_playing,
+        title:     nowPlaying.item.name || "Unknown Track",
+        artist:    nowPlaying.item.artists?.map((a) => a.name).join(", ") || "Unknown Artist",
+        album:     nowPlaying.item.album?.name || "Unknown Album",
+        image:     nowPlaying.item.album?.images?.[1]?.url || null,
+        url:       nowPlaying.item.external_urls?.spotify || "#",
+        progress:  nowPlaying.progress_ms || 0,
+        duration:  nowPlaying.item.duration_ms || 0,
       };
-    } else if (recentlyPlayed?.items?.length) {
+    } else if (recentlyPlayed?.items?.length > 0) {
       const track = recentlyPlayed.items[0].track;
       nowPlayingData = {
         isPlaying: false,
-        title:     track.name,
-        artist:    track.artists.map((a) => a.name).join(", "),
-        album:     track.album.name,
-        image:     track.album.images[1]?.url || null,
-        url:       track.external_urls.spotify,
+        title:     track.name || "Unknown Track",
+        artist:    track.artists?.map((a) => a.name).join(", ") || "Unknown Artist",
+        album:     track.album?.name || "Unknown Album",
+        image:     track.album?.images?.[1]?.url || null,
+        url:       track.external_urls?.spotify || "#",
       };
     }
 

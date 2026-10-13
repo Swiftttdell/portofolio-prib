@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="350" viewBox="0 0 740 350" fill="none">
+  <defs>
+    <linearGradient id="head" x1="312" y1="75" x2="425" y2="172" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE51A"/>
+      <stop offset="1" stop-color="#E7B900"/>
+    </linearGradient>
+    <linearGradient id="body" x1="293" y1="176" x2="445" y2="291" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF"/>
+      <stop offset="1" stop-color="#D9D9D9"/>
+    </linearGradient>
+    <linearGradient id="leg" x1="327" y1="274" x2="413" y2="337" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3F3F3"/>
+      <stop offset="1" stop-color="#CACACA"/>
+    </linearGradient>
+  </defs>
+  <rect width="740" height="350" rx="18" fill="#F6F7F8"/>
+  <rect x="541" y="0" width="199" height="350" rx="18" fill="#EAEAEA"/>
+  <path d="M0 18A18 18 0 0 1 18 0h505v350H18A18 18 0 0 1 0 332V18Z" fill="#FFF"/>
+  <ellipse cx="271" cy="324" rx="111" ry="13" fill="#222" fill-opacity=".08"/>
+  <rect x="331" y="51" width="76" height="14" rx="4" fill="#E8BC00"/>
+  <rect x="317" y="64" width="104" height="103" rx="27" fill="url(#head)"/>
+  <circle cx="348" cy="111" r="5" fill="#101010"/>
+  <circle cx="390" cy="111" r="5" fill="#101010"/>
+  <path d="M350 130c8 9 25 9 34 0" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+  <path d="m318 177-20 11-24 70 20 10 26-53m101-38 22 11 24 70-20 10-27-53" fill="url(#body)" stroke="#DDD" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m305 180 17-13h94l17 13-17 102h-94l-17-102Z" fill="url(#body)" stroke="#DADADA" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M347 218c10-9 28-9 38 0-10 9-28 9-38 0Z" fill="#F5D65C" stroke="#D9BC52" stroke-width="2"/>
+  <path d="M350 287h33v48h-33v-48Zm35 0h33v48h-33v-48Z" fill="url(#leg)" stroke="#CCC" stroke-width="3"/>
+  <path d="M286 258c-9 0-16 8-16 18s7 18 16 18c7 0 12-5 12-12v-12c0-7-5-12-12-12Zm138 0c9 0 16 8 16 18s-7 18-16 18c-7 0-12-5-12-12v-12c0-7 5-12 12-12Z" fill="#F4CE13"/>
+  <text x="566" y="39" fill="#303030" font-family="Arial,sans-serif" font-size="17" font-weight="800" letter-spacing=".7">CUSTOMIZE</text>
+  <rect x="563" y="60" width="154" height="31" rx="8" fill="#FFF" stroke="#D6D6D6"/>
+  <text x="640" y="80" text-anchor="middle" fill="#555" font-family="Arial,sans-serif" font-size="11" font-weight="700">EXPLORE</text>
+  <rect x="563" y="99" width="154" height="31" rx="8" fill="#FFF" stroke="#D6D6D6"/>
+  <text x="640" y="119" text-anchor="middle" fill="#555" font-family="Arial,sans-serif" font-size="11" font-weight="700">RANDOMIZE</text>
+  <text x="563" y="159" fill="#444" font-family="Arial,sans-serif" font-size="11" font-weight="800">HEAD</text>
+  <text x="563" y="177" fill="#777" font-family="Arial,sans-serif" font-size="8" letter-spacing=".5">EXPRESSION</text>
+  <rect x="563" y="184" width="154" height="12" rx="6" fill="#393939"/>
+  <circle cx="577" cy="190" r="7" fill="#F2CD00"/>
+  <text x="563" y="222" fill="#444" font-family="Arial,sans-serif" font-size="11" font-weight="800">UPPER BODY</text>
+  <text x="563" y="241" fill="#777" font-family="Arial,sans-serif" font-size="8" letter-spacing=".5">HUE</text>
+  <rect x="563" y="248" width="154" height="12" rx="6" fill="#393939"/>
+  <circle cx="640" cy="254" r="7" fill="#F2CD00"/>
+  <text x="563" y="284" fill="#777" font-family="Arial,sans-serif" font-size="8" letter-spacing=".5">SATURATION</text>
+  <rect x="563" y="291" width="154" height="12" rx="6" fill="#393939"/>
+  <circle cx="577" cy="297" r="7" fill="#F2CD00"/>
+  <text x="29" y="326" fill="#565D67" font-family="Arial,sans-serif" font-size="12" font-weight="700">LEGO MINIFIGURE CUSTOMIZER</text>
+</svg>

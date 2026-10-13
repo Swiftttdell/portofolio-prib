@@ -3,22 +3,11 @@ let cmdOpen = false;
 const DEVICON_MAP = {
   "html":"devicon-html5-plain colored","css":"devicon-css3-plain colored",
   "javascript":"devicon-javascript-plain colored","js":"devicon-javascript-plain colored",
-  "typescript":"devicon-typescript-plain colored","ts":"devicon-typescript-plain colored",
   "react":"devicon-react-original colored","nextjs":"devicon-nextjs-plain",
-  "next.js":"devicon-nextjs-plain","vue":"devicon-vuejs-plain colored",
-  "bootstrap":"devicon-bootstrap-plain colored","tailwind":"devicon-tailwindcss-plain colored",
   "tailwindcss":"devicon-tailwindcss-plain colored","jquery":"devicon-jquery-plain colored",
   "laravel":"devicon-laravel-plain colored","php":"devicon-php-plain colored",
   "python":"devicon-python-plain colored","mysql":"devicon-mysql-plain colored",
-  "nodejs":"devicon-nodejs-plain colored","node.js":"devicon-nodejs-plain colored",
-  "express":"devicon-express-original","mongodb":"devicon-mongodb-plain colored",
-  "postgresql":"devicon-postgresql-plain colored","firebase":"devicon-firebase-plain colored",
-  "git":"devicon-git-plain colored","github":"devicon-github-original",
-  "figma":"devicon-figma-plain colored","vscode":"devicon-vscode-plain colored",
-  "docker":"devicon-docker-plain colored","sass":"devicon-sass-original colored",
-  "redux":"devicon-redux-original colored","graphql":"devicon-graphql-plain colored",
-  "flutter":"devicon-flutter-plain colored","dart":"devicon-dart-plain colored",
-  "kotlin":"devicon-kotlin-plain colored","java":"devicon-java-plain colored",
+  "figma":"devicon-figma-plain colored","vscode":"devicon-vscode-plain colored"
 };
 
 function renderTechIcons(techArr) {
@@ -53,7 +42,7 @@ const I18N = {
       title: "Hi, saya Fadel Muhammad",
       subtitle: "Web Developer & UI/UX Design yang fokus pada antarmuka modern dan pengalaman pengguna yang nyaman.",
       metaLocation: "Kota Bekasi, Jawa Barat", metaWork: "Ayo Berkolaborasi",
-      p1: "Seorang Web Developer & UI/UX Design yang berdedikasi untuk membangun solusi digital yang berdampak. Saya spesialis dalam pengembangan platform web yang skalabel dan design tampilan yang user friendly menggunakan tech stack seperti PHP, TypeScript, Next.js, dan Figma.",
+      p1: "Seorang Web Developer & UI/UX Design yang berdedikasi untuk membangun solusi digital yang berdampak. Saya spesialis dalam pengembangan platform web yang skalabel dan design tampilan yang user friendly menggunakan tech stack seperti React.js, dan Google Stitch.",
       p2: "Fokus saya adalah merancang arsitektur website yang terstruktur dengan baik, dan mudah dipelihara. Saya memadukan keahlian teknis dengan komunikasi proaktif dan kepemimpinan untuk memastikan setiap proyek memberikan kejelasan logis dan dampak nyata di dunia nyata."
     },
     pages: {
@@ -67,7 +56,7 @@ const I18N = {
     },
     sections: {
       skillTitle:"Keahlian", skillSub:"Keahlian profesional saya.",
-      aboutCareerTitle:"Karier", aboutCareerSub:"Perjalanan profesional saya.",
+      aboutCareerTitle:"Pengalaman Magang", aboutCareerSub:"Pengalaman dan pembelajaran saya selama magang.",
       aboutEduTitle:"Pendidikan", aboutEduSub:"Perjalanan pendidikan saya.",
       salutation:"Salam hangat,", showDetail:"Tampilkan detail", hideDetail:"Sembunyikan detail",
       projectFilterType:"TIPE", projectFilterCategory:"KATEGORI",
@@ -752,9 +741,7 @@ function init() {
     const validRoute = DATA.nav.some(item => item.id === resolvedHash);
     navigate(validRoute ? resolvedHash : "beranda", false);
   }
-
   // Sembunyikan page loader setelah semua konten selesai dirender
   hidePageLoader();
 }
-
 document.addEventListener("DOMContentLoaded", init);

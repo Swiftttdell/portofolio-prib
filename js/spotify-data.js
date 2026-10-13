@@ -2,15 +2,15 @@ const SPOTIFY_DATA = {
 
   /* PROFIL */
   profile: {
-    name: "dellSwift",
+    name: "Swifttdell",
     image: "img/profil-spotify.webp",
     url: "https://open.spotify.com/playlist/0uCBJpmjHGf9B6LxFhUXml?si=46ac9cfa2c494c65&pt=0d2286e34add80cb541addb6fcebdef6",
   },
 
   /* STATISTIK */
   stats: {
-    playlists:  3,
-    likedSongs: 1.173,
+    playlists:  2,
+    likedSongs:173,
     topArtists: 5,
   },
 
@@ -28,7 +28,7 @@ const SPOTIFY_DATA = {
       name:  "MOOD",
       total: 10,
       image: "img/playlist-2.webp",
-      url:   "https://open.spotify.com/playlist/2fBCDyydzdN9Pt1iqbJLRV?si=5be558368c044a08&pt=d96fa469bdc6b83fc6458236ba6b54c9",
+      url:   "https://open.spotify.com/playlist/2fBCDyydzdN9Pt1iqbJLRV?si=26834334f38a494a&pt=1198dcf4ece6b4a1d6027591b3c44207",
     },
   ],
 
@@ -37,6 +37,7 @@ const SPOTIFY_DATA = {
     {
       id:       "track-1",
       title:    "White Ferrari",
+      
       artist:   "Frank Ocean",
       image:    "img/spotify-lagu/white ferrari, frank ocean.webp",
       url:      "https://open.spotify.com/intl-id/track/2LMkwUfqC6S6s6qDVlEuzV?si=24931b55f98b405b",
@@ -46,8 +47,8 @@ const SPOTIFY_DATA = {
       id:       "track-2",
       title:    "Mesra-mesraanya Kecil-kecilan dulu",
       artist:   "Sal Priadi",
-      image:    "img/spotify-lagu/— sullyoon nmixx sal priadi moodboard.webp",
-      url:      "https://open.spotify.com/intl-id/track/5p0ietGkLNEqx1Z7ijkw5g?si=3d99d81e9f9f4d66",
+      image:    "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02680f1025f6619c42a3c23864",
+      url:      "https://open.spotify.com/track/3TW8XLF8PyA3kFsV1l5713",
       duration: "3:30",
     },
     {
@@ -60,11 +61,11 @@ const SPOTIFY_DATA = {
     },
     {
       id:       "track-4",
-      title:    "That's Why You Go Away",
-      artist:   "Strange Foreign Beauty",
-      image:    "img/spotify-lagu/thats-why-you-go-away.webp",
-      url:      "https://open.spotify.com/track/2ccW4vFSVKRgVjkZzvdjRw?si=6lZrivxkSHyyuEb0uzikzA",
-      duration: "4:13",
+      title:    "HEARTACHE (SHALL NOT SURVIVE)",
+      artist:   "Bin Idris",
+      image:    "img/spotify-lagu/Heartache.webp",
+      url:      "https://open.spotify.com/intl-id/track/1SYkyZa7sjDxw96S4Yd2z1?si=8350647270844b6d",
+      duration: "3:46",
     },
     {
       id:       "track-5",
@@ -101,10 +102,10 @@ const SPOTIFY_DATA = {
     },
     {
       id:    "artist-4",
-      name:  "Afgan",
-      genre: "Pop",
-      image: "img/spotify-artis/afgan-profil.webp",
-      url:   "https://open.spotify.com/artist/4hYoijj2oGhG6d9vCEn7Aw",
+      name:  "The Jeblogs",
+      genre: "Garage Punk",
+      image: "img/spotify-artis/Thejeblogs.webp",
+      url:   "https://open.spotify.com/intl-id/artist/2uGEBoKHco8L9Pbq99iXmv?si=93idnVNLRkS8hfbY73XH0Q",
     },
     {
       id:    "artist-5",
@@ -144,9 +145,23 @@ const SPOTIFY_DATA = {
     {
       id:    "artist-10",
       name:  "Taylor Swift",
-      genre: "Pop dan Country",
+      genre: "Country",
       image: "img/spotify-artis/taylor-swift.webp",
       url:   "spotify:artist:06HL4z0CvFAxyc27GXpf02",
+    },
+    {
+      id:"artist-11",
+      name:"Rex Orange County",
+      genre:"Pop",
+      image:"img/spotify-artis/Rex Orange County .webp",
+      url:"https://open.spotify.com/intl-id/artist/7pbDxGE6nQSZVfiFdq9lOL?si=lDEYPVRbRmehMmYv4dJHbA",
+    },
+    {
+      id:"artist-12",
+      name:"Ed Sheeran",
+      genre:"Pop",
+      image: "img/spotify-artis/Love love love this song.webp",
+      url:"https://open.spotify.com/intl-id/artist/6eUKZXaKkcviH0Ku9w2n3V?si=AOUKyzAKR2ONM2jjKrzmtw",
     },
   ],
 };

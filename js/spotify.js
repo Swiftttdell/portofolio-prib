@@ -120,6 +120,7 @@ function renderLikedSongs(songs) {
         <div class="sp-track-info">
           <p class="sp-track-name">${t.title}</p>
           <p class="sp-track-artist">${t.artist}</p>
+          ${t.lyrics ? `<p class="sp-track-lyrics">${t.lyrics}</p>` : ""}
         </div>
         <span class="sp-track-heart">${heartSVG()}</span>
         <span class="sp-track-dur">${t.duration}</span>
@@ -190,4 +191,130 @@ function initSpotify() {
   observer.observe(page, { attributes: true, attributeFilter: ["class"] });
 }
 
-document.addEventListener("DOMContentLoaded", initSpotify);
+function initSpotifyAutoplay() {
+  const previewDurationMs = 30000;
+  const player = document.getElementById("sp-autoplay-player");
+  const status = document.getElementById("sp-autoplay-status");
+  const playButton = document.getElementById("sp-autoplay-button");
+  const songs = typeof SPOTIFY_DATA === "undefined" ? [] : SPOTIFY_DATA.likedSongs || [];
+  const tracks = songs.map((song) => {
+    const match = song.url.match(/track\/([a-zA-Z0-9]+)/);
+    return match ? { ...song, uri: `spotify:track:${match[1]}` } : null;
+  }).filter(Boolean);
+
+  const firstTrack = tracks[0];
+
+  if (!player || !status || !playButton || !firstTrack) {
+    console.error("[Spotify] Pemutar otomatis tidak dapat dimulai: data lagu atau elemen pemutar tidak ditemukan.");
+    if (status) status.textContent = "Pemutar Spotify tidak dapat dimuat.";
+    return;
+  }
+
+  let currentTrackIndex = 0;
+  let advancing = false;
+  let playbackTimer;
+
+  function trackDurationMs(track) {
+    const match = track.duration.match(/^(\d+):(\d{2})$/);
+    return match ? (Number(match[1]) * 60 + Number(match[2])) * 1000 : 0;
+  }
+
+  function scheduleTrackEnd(controller, duration, position = 0) {
+    clearTimeout(playbackTimer);
+    if (!duration) {
+      const fallbackDuration = trackDurationMs(tracks[currentTrackIndex]);
+      if (!fallbackDuration) {
+        console.error(`[Spotify] Durasi lagu tidak tersedia: ${tracks[currentTrackIndex].title}`);
+        status.textContent = `Durasi lagu tidak tersedia: ${tracks[currentTrackIndex].title}.`;
+        return;
+      }
+      duration = fallbackDuration;
+    }
+
+    const remaining = duration - position;
+    if (remaining <= 1000) {
+      advanceTrack(controller);
+      return;
+    }
+
+    playbackTimer = setTimeout(() => advanceTrack(controller), remaining - 1000);
+  }
+
+  window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    IFrameAPI.createController(player, {
+      uri: firstTrack.uri,
+      width: "100%",
+      height: 152,
+      theme: "dark",
+    }, (controller) => {
+      playButton.disabled = false;
+      playButton.addEventListener("click", () => {
+        status.textContent = "Mencoba memutar lagu...";
+        controller.resume();
+      });
+      status.textContent = "Mencoba memutar lagu favorit. Jika tidak mulai, tekan Putar lagu.";
+      controller.addListener("playback_started", (event) => {
+        const trackIndex = tracks.findIndex((track) => track.uri === event.data.playingURI);
+        if (trackIndex >= 0) currentTrackIndex = trackIndex;
+        advancing = false;
+        status.textContent = `Sedang diputar: ${tracks[currentTrackIndex].title} — ${tracks[currentTrackIndex].artist}`;
+        playButton.hidden = true;
+      });
+      controller.addListener("playback_update", (event) => {
+        const playback = event.data;
+        if (advancing) return;
+
+        if (playback.isPaused) {
+          clearTimeout(playbackTimer);
+          if (playback.position >= previewDurationMs - 1000 && playback.duration > playback.position + 1000) {
+            advanceTrack(controller);
+            return;
+          }
+          if (playback.duration && playback.position < playback.duration - 1000) {
+            status.textContent = `Dijeda: ${tracks[currentTrackIndex].title} — ${tracks[currentTrackIndex].artist}`;
+            playButton.hidden = false;
+          }
+          return;
+        }
+        if (playback.isBuffering) {
+          clearTimeout(playbackTimer);
+          return;
+        }
+
+        scheduleTrackEnd(controller, playback.duration, playback.position);
+      });
+      controller.play();
+    });
+  };
+
+  function advanceTrack(controller) {
+    if (advancing) return;
+    clearTimeout(playbackTimer);
+
+    advancing = true;
+    currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+    const nextTrack = tracks[currentTrackIndex];
+    status.textContent = `Lagu berikutnya: ${nextTrack.title} — ${nextTrack.artist}`;
+    playButton.hidden = true;
+    if (typeof controller.loadEntity === "function") {
+      controller.loadEntity(nextTrack.uri);
+    } else {
+      controller.loadUri(nextTrack.uri);
+    }
+    controller.play();
+  }
+
+  const script = document.createElement("script");
+  script.src = "https://open.spotify.com/embed/iframe-api/v1";
+  script.async = true;
+  script.onerror = () => {
+    console.error("[Spotify] Gagal memuat iFrame API Spotify.");
+    status.textContent = "Pemutar Spotify gagal dimuat. Coba buka Spotify melalui tombol di atas.";
+  };
+  document.body.appendChild(script);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSpotify();
+  initSpotifyAutoplay();
+});

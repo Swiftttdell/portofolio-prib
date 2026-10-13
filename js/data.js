@@ -4,8 +4,8 @@ const DATA = {
     avatar: "img/me.webp",
     status: "Ayo Berkolaborasi",
     email: "fadelmuh185@email.com",
-    github: "https://github.com/fm5355138-pixel",
-    instagram: "https://www.instagram.com/fdelmhmmdd_/",
+    github: "https://github.com/Swiftttdell",
+    instagram: "https://www.instagram.com/_swifttdell/",
     linkedin: "#",
     whatsapp: "https://wa.me/6289509394128"
   },
@@ -35,7 +35,7 @@ const DATA = {
       { icon: "location", text: "Kota Bekasi, Jawa Barat" },
       { icon: "briefcase", text: "Open to Collaboration" }
     ],
-    p1: "Seorang Web Developer & UI/UX Design yang berdedikasi untuk membangun solusi digital yang berdampak. Saya spesialis dalam pengembangan platform web yang skalabel dan design tampilan yang user friendly menggunakan tech stack seperti PHP, TypeScript, Next.js, dan Figma.",
+    p1: "Seorang Web Developer & UI/UX Design yang berdedikasi untuk membangun solusi digital yang berdampak. Saya spesialis dalam pengembangan platform web yang skalabel dan design tampilan yang user friendly menggunakan tech stack seperti PHP, React.js, dan Figma.",
     p2: "Fokus saya adalah merancang arsitektur website yang terstruktur dengan baik, dan mudah dipelihara. Saya memadukan keahlian teknis dengan komunikasi proaktif dan kepemimpinan untuk memastikan setiap proyek memberikan kejelasan logis dan dampak nyata di dunia nyata."
   },
 
@@ -52,18 +52,17 @@ const DATA = {
     { name: "HTML",       icon: "devicon-html5-plain colored",       category: ["utama","frontend"], colorClass: "skill-html" },
     { name: "CSS",        icon: "devicon-css3-plain colored",        category: ["utama","frontend"], colorClass: "skill-css" },
     { name: "JavaScript", icon: "devicon-javascript-plain colored",  category: ["utama","frontend"], colorClass: "skill-js" },
-    { name: "TypeScript", icon: "devicon-typescript-plain colored",  category: ["utama","frontend"], colorClass: "skill-ts" },
-    { name: "TailwindCSS",icon: "devicon-tailwindcss-plain colored", category: "frontend",           colorClass: "skill-tailwind" },
-    { name: "Bootstrap",  icon: "devicon-bootstrap-plain colored",   category: "frontend",           colorClass: "skill-bootstrap" },
-    { name: "PHP",        icon: "devicon-php-plain colored",         category: "backend",            colorClass: "skill-php" },
-    { name: "Laravel",    icon: "devicon-laravel-plain colored",     category: "backend",            colorClass: "skill-laravel" },
-    { name: "MySQL",      icon: "devicon-mysql-plain colored",       category: "database",           colorClass: "skill-mysql" },
-    { name: "React.js",   icon: "devicon-react-original colored",    category: "frontend",           colorClass: "skill-react" },
-    { name: "Next.js",    icon: "devicon-nextjs-plain",              category: "frontend",           colorClass: "skill-nextjs" },
-    { name: "Git",        icon: "devicon-git-plain colored",         category: "tools",              colorClass: "skill-git" },
-    { name: "GitHub",     icon: "devicon-github-original",           category: "tools",              colorClass: "skill-github" },
-    { name: "npm",        icon: "devicon-npm-original-wordmark colored", category: "tools",          colorClass: "skill-npm" },
-    { name: "Bun",        icon: "devicon-bun-plain colored",         category: "tools",              colorClass: "skill-bun" }
+    { name: "Java",       icon: "devicon-java-plain colored",        category: ["utama","backend"],  colorClass: "skill-java" },
+    { name: "Kotlin",     icon: "devicon-kotlin-plain colored",      category: ["utama","backend"],  colorClass: "skill-kotlin" },
+    { name: "TailwindCSS",icon: "devicon-tailwindcss-plain colored", category: ["utama","frontend"], colorClass: "skill-tailwind" },
+    { name: "PHP",        icon: "devicon-php-plain colored",         category: ["utama","backend"],  colorClass: "skill-php" },
+    { name: "MySQL",      icon: "devicon-mysql-plain colored",       category: ["utama","database"], colorClass: "skill-mysql" },
+    { name: "React.js",   icon: "devicon-react-original colored",    category: ["utama","frontend"], colorClass: "skill-react" },
+    { name: "Git",        icon: "devicon-git-plain colored",         category: ["utama","tools"],    colorClass: "skill-git" },
+    { name: "GitHub",     icon: "devicon-github-original",           category: ["utama","tools"],    colorClass: "skill-github" },
+    { name: "npm",        icon: "devicon-npm-plain",                   category: ["utama","tools"],  colorClass: "skill-npm" },
+    { name: "Figma",      icon: "devicon-figma-plain colored",       category: ["utama","tools"],    colorClass: "skill-figma" },
+    { name: "Bun",        icon: "devicon-bun-plain colored",         category: ["utama","tools"],    colorClass: "skill-bun" },
   ],
 
   about: {
@@ -73,8 +72,8 @@ const DATA = {
         en: "I am a student with a deep passion for technology, especially in building engaging digital experiences. As someone who studies Web Development alongside UI/UX Design, I really enjoy the process of turning raw ideas into aesthetic and functional visual products. For me, coding is not just about lines of commands — it's about creating solutions that benefit many people."
       },
       {
-        id: "Dalam hal teknis, saya sehari-hari berkutat dengan PHP dan TypeScript untuk membangun sisi engine website yang tangguh dan interaktif. Namun, sebelum masuk ke bagian kode, saya biasanya menuangkan kreativitas saya di Figma terlebih dahulu. Di sana, saya merancang tampilan antarmuka yang modern dan memastikan pengalaman pengguna (user experience) terasa mulus dan nyaman saat digunakan.",
-        en: "On the technical side, I spend my days working with PHP and TypeScript to build robust, interactive website engines. But before jumping into code, I usually pour my creativity into Figma first. There, I craft modern interfaces and make sure the user experience feels smooth and comfortable to use."
+        id: "Dalam hal teknis, saya sehari-hari berkutat dengan React Js untuk membangun sisi engine website yang tangguh dan interaktif. Namun, sebelum masuk ke bagian kode, saya biasanya menuangkan kreativitas saya di Figma terlebih dahulu. Di sana, saya merancang tampilan antarmuka yang modern dan memastikan pengalaman pengguna (user experience) terasa mulus dan nyaman saat digunakan.",
+        en: "On the technical side, I spend my days working with React Js to build robust, interactive website engines. But before jumping into code, I usually pour my creativity into Figma first. There, I craft modern interfaces and make sure the user experience feels smooth and comfortable to use."
       },
       {
         id: "Meskipun masih berstatus pelajar, saya selalu haus akan tantangan baru dan terus mengikuti perkembangan teknologi terbaru. Fokus utama saya adalah terus belajar, bereksperimen dengan berbagai desain, dan menghasilkan proyek-proyek web yang tidak hanya keren dilihat, tapi juga efisien secara performa.",
@@ -84,20 +83,26 @@ const DATA = {
     signature: "Fadel Muhammad",
     careers: [
       {
-        role: { id: "Taruna Bangsa", en: "Taruna Bangsa" },
-        company: { id: "Disiplin dalam Karakter, Unggul dalam Karya", en: "Disciplined in Character, Excel in Innovation" },
-        period: { id: "2024-2027", en: "2024 - 2027" },
+      role:
+       { id: "KPPN Bekasi", en: "KPPN Bekasi" },
+        company: { id: "Kantor Pelayanan Perbendaharaan Negara Bekasi", en: "State Treasury Services Office Bekasi" },
+        period: { id: " 3 November 2025 - 30 Januari 2026", en: "3 November 2025 - 30 Januari 2026" },
         detail: {
-          id: "Mendedikasikan keahlian saya sebagai Taruna Bangsa untuk merancang, membangun prototipe, dan mengimplementasikan antarmuka aplikasi atau situs web yang estetis, intuitif, dan konsisten demi kemajuan digital institusi.",
-          en: "Dedicating my expertise as a Taruna Bangsa cadet to design, build prototypes, and implement aesthetic, intuitive, and consistent application or website interfaces for the institution's digital advancement."
+          id: "Mendedikasikan keahlian saya selama Magang/PKL di KPPN Bekasi untuk merancang, membangun prototipe, dan mengimplementasikan antarmuka aplikasi atau situs web yang estetis, intuitif, dan konsisten demi mendukung pelayanan publik dan digitalisasi instansi.",
+          en: "Dedicating my expertise during internship at KPPN Bekasi to design, build prototypes, and implement aesthetic, intuitive, and consistent application or website interfaces to support public services and institutional digitalization."
         },
-        logo: "img/tb.webp"
+        logo: "img/Kppn.webp"
       }
     ],
     education: [
       {
+        name: { id: "SMKS Taruna Bangsa", en: "SMKS Taruna Bangsa"},
+        meta: { id: "SMK - 2024 - 2027 -  Kota Bekasi, Jawa Barat", en: "Vocational High School - 2024 - 2027 - Bekasi City, West Java"},
+        logo: "img/tb.webp"
+      },
+      {
         name: { id: "SMP IT Al-Manar", en: "SMP IT Al-Manar" },
-        meta: { id: "SMP - 2020 - 2024 - Kota Bekasi, Jawa Barat", en: "Junior High School - 2020 - 2024 - Bekasi City, West Java"},
+        meta: { id: "SMP - 2020 - 2023 - Kota Bekasi, Jawa Barat", en: "Junior High School - 2020 - 2024 - Bekasi City, West Java"},
         logo: "img/almanar.webp"
       },
       {
@@ -125,7 +130,59 @@ const DATA = {
       { key: "Freelance", id: "Freelance", en: "Freelance" },
       { key: "Lomba", id: "Lomba", en: "Competition" }
     ],
-    items: [    
+    items: [
+      {
+        slug: "fadel-my-id",
+        title: "Fadel.my.id — Personal Portfolio",
+        desc: {
+          id: "Website portofolio pribadi yang menampilkan profil, keahlian, pencapaian, proyek, dan musik favorit.",
+          en: "A personal portfolio website featuring my profile, skills, achievements, projects, and favorite music."
+        },
+        type: "Web",
+        category: "Proyek Pribadi",
+        image: "img/web-developer.webp",
+        featured: true,
+        tech: ["HTML", "CSS", "JavaScript", "Vercel"],
+        links: [
+          { label: "Live Demo", url: "https://fadel.my.id" },
+          { label: "GitHub Source", url: "https://github.com/fm5355138-pixel/pribadi" }
+        ],
+        github_raw: "fm5355138-pixel/pribadi"
+      },
+      {
+        slug: "cheznous-caffe",
+        title: "ChezNous Caffe — Boardgame Cafe",
+        desc: {
+          id: "Website boardgame cafe dengan menu makanan dan minuman, 100+ pilihan boardgame, keranjang pesanan, serta booking meja.",
+          en: "A boardgame cafe website featuring food and drink menus, 100+ boardgames, an order cart, and table booking."
+        },
+        type: "Web",
+        category: "Proyek Pribadi",
+        image: "img/proyek/cheznous-caffe.svg",
+        tech: ["React", "TypeScript"],
+        detail: {
+          id: "<h3>Gambaran Proyek</h3><p>ChezNous Caffe adalah website boardgame cafe yang menggabungkan informasi kafe, menu, pilihan permainan, pemesanan, dan booking meja dalam satu tempat.</p><h3>Fitur dan Konten</h3><ul><li>Menampilkan menu makanan favorit seperti Bakso ChezNous, Nasi Goreng ChezNous, dan Mix Platter, serta pilihan minuman signature.</li><li>Memperkenalkan koleksi 100+ judul boardgame dan suasana kafe yang nyaman.</li><li>Menyediakan keranjang pesanan dan akses untuk melihat menu serta melakukan booking meja.</li><li>Menampilkan pilihan paket bermain: Main Per Jam Rp12.000/jam dan All Day Play Rp35.000/orang.</li></ul><h3>Teknologi</h3><p>Dibangun menggunakan React dan TypeScript.</p>",
+          en: "<h3>Project Overview</h3><p>ChezNous Caffe is a boardgame cafe website that brings together cafe information, menus, games, ordering, and table booking.</p><h3>Features and Content</h3><ul><li>Showcases favorite food such as ChezNous Meatballs, ChezNous Fried Rice, and Mix Platter, along with signature drinks.</li><li>Introduces a collection of 100+ boardgames and the cafe's cozy atmosphere.</li><li>Provides an order cart and access to browse the menu and book a table.</li><li>Lists play options: Main Per Jam at Rp12,000/hour and All Day Play at Rp35,000/person.</li></ul><h3>Technology</h3><p>Built with React and TypeScript.</p>"
+        },
+        links: [
+          { label: "Live Demo", url: "https://caffe-hc98.vercel.app" }
+        ]
+      },
+      {
+        slug: "lego-minifigure",
+        title: "Lego Minifigure — Customizer",
+        desc: {
+          id: "Customizer interaktif untuk mengubah ekspresi serta warna bagian atas dan bawah minifigure Lego.",
+          en: "An interactive customizer for changing a Lego minifigure's expression and upper- and lower-body colors."
+        },
+        type: "Web",
+        category: "Proyek Pribadi",
+        image: "img/proyek/lego-minifigure.svg",
+        tech: ["HTML", "CSS", "JavaScript"],
+        links: [
+          { label: "Live Demo", url: "https://fadel-nu.vercel.app" }
+        ]
+      }
     ]
   },
 
@@ -183,8 +240,8 @@ const DATA = {
         {
           name: { id: "Laptop IDEAPAD", en: "IDEAPAD Laptop" },
           desc: {
-            id: "Perangkat portable dengan spesifikasi Intel Core i3, RAM 8GB yang memungkinkan saya untuk bekerja dimana saja",
-            en: "A portable rig with Intel Core i3, 8GB RAM that lets me work from anywhere."
+            id: "Perangkat portable dengan spesifikasi Intel Core i3, RAM 8GB yang memungkinkan saya untuk belajar dimana saja",
+            en: "A portable rig with Intel Core i3, 8GB RAM that lets me study from anywhere."
           }
         },
         {
@@ -240,13 +297,6 @@ const DATA = {
       group: { id: "Aplikasi", en: "Apps" },
       items: [
         {
-          name: { id: "Figma", en: "Figma" },
-          desc: {
-            id: "Platform desain kolaboratif utama yang saya gunakan untuk merancang wireframe, prototipe interaktif, hingga mengelola sistem desain yang konsisten",
-            en: "My main collaborative design platform for wireframing, interactive prototyping, and maintaining a consistent design system."
-          }
-        },
-        {
           name: { id: "Google Stitch", en: "Google Stitch" },
           desc: {
             id: " Alat bantu untuk integrasi aset desain yang memastikan setiap elemen visual selaras dengan standar pengembangan produk digital modern",
@@ -258,10 +308,6 @@ const DATA = {
     {
       group: { id: "Tech Stack", en: "Tech Stack" },
       items: [
-        {
-          name: { id: "TypeScript", en: "TypeScript" },
-          desc: { id: "Bahasa utama untuk proyek besar", en: "Main language for large projects." }
-        },
         {
           name: { id: "JavaScript", en: "JavaScript" },
           desc: { id: "Fondasi pengembangan web", en: "The foundation of web development." }
@@ -275,8 +321,8 @@ const DATA = {
           desc: { id: "Database relasional utama", en: "Main relational database." }
         },
         {
-          name: { id: "Laravel", en: "Laravel" },
-          desc: { id: "Framework PHP favorit saya", en: "My favorite PHP framework." }
+          name: { id: "React", en: "React" },
+          desc: { id: "Framework JavaScript untuk UI", en: "JavaScript framework for building user interfaces." }
         }
       ]
     }
@@ -304,7 +350,7 @@ const DATA = {
       button: { id: "Pergi ke Instagram", en: "Open Instagram" },
       icon: "instagram",
       theme: "theme-pink",
-      url: "https://www.instagram.com/fdelmhmmdd_/"
+      url: "https://www.instagram.com/_swifttdell/"
     },
     {
       title: { id: "Mari Terhubung", en: "Let's Connect" },
@@ -337,7 +383,7 @@ const DATA = {
       button: { id: "Pergi ke Github", en: "Open GitHub" },
       icon: "github",
       theme: "theme-navy",
-      url: "https://github.com/fm5355138-pixel"
+      url: "https://github.com/Swiftttdell"
     }
   ],
 
