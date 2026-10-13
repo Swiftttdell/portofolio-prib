@@ -159,9 +159,9 @@ Terjemahan (Indonesia ↔ English) dikelola di objek `I18N` dalam **`js/app.js`*
 
 Punya pertanyaan, feedback, atau mau kolaborasi?
 
-[![Email](https://img.shields.io/badge/Email-aan27052010@email.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aan27052010@email.com)
-[![Instagram](https://img.shields.io/badge/Instagram-@ann.x10-E1306C?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/ann.x10)
-[![GitHub](https://img.shields.io/badge/GitHub-aan--HTML-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aan-HTML)
+[![Email](https://img.shields.io/badge/Email-fadelmuh185%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fadelmuh185@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-@__swifttdell-E1306C?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_swifttdell/)
+[![GitHub](https://img.shields.io/badge/GitHub-Swiftttdell-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Swiftttdell/)
 
 </div>
 
@@ -169,6 +169,6 @@ Punya pertanyaan, feedback, atau mau kolaborasi?
 
 <div align="center">
 
-*Bima, Nusa Tenggara Barat · 2025 – 2026*
+*Bekasi, Jawa Barat · 2025 – 2026*
 
 </div>

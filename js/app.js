@@ -58,6 +58,8 @@ const I18N = {
       skillTitle:"Keahlian", skillSub:"Keahlian profesional saya.",
       aboutCareerTitle:"Pengalaman Magang", aboutCareerSub:"Pengalaman dan pembelajaran saya selama magang.",
       aboutEduTitle:"Pendidikan", aboutEduSub:"Perjalanan pendidikan saya.",
+      contactPrompt:"Punya pertanyaan, feedback, atau mau kolaborasi?",
+      contactLocation:"Kota Bekasi, Jawa Barat",
       salutation:"Salam hangat,", showDetail:"Tampilkan detail", hideDetail:"Sembunyikan detail",
       projectFilterType:"TIPE", projectFilterCategory:"KATEGORI",
       projectViewDetail:"Lihat Detail", projectBack:"Kembali", issuedOn:"Terbit"
@@ -98,6 +100,8 @@ const I18N = {
       skillTitle:"Skills", skillSub:"My professional skills.",
       aboutCareerTitle:"Career", aboutCareerSub:"My professional journey.",
       aboutEduTitle:"Education", aboutEduSub:"My education journey.",
+      contactPrompt:"Have a question, feedback, or want to collaborate?",
+      contactLocation:"Bekasi City, West Java",
       salutation:"Warm regards,", showDetail:"Show details", hideDetail:"Hide details",
       projectFilterType:"TYPE", projectFilterCategory:"CATEGORY",
       projectViewDetail:"View Detail", projectBack:"Back", issuedOn:"Issued"
@@ -554,10 +558,12 @@ function renderUses() {
 
 function renderContacts() {
   byId("contact-grid").innerHTML = DATA.contacts.map(item => `
-    <article class="contact-card ${item.theme} ${item.full?"full":""}">
-      <div><h3 class="contact-title">${escapeHtml(tx(item.title))}</h3><p class="contact-desc">${escapeHtml(tx(item.desc))}</p></div>
-      <div class="contact-footer"><a class="contact-link" href="${item.url}" target="_blank" rel="noreferrer">${escapeHtml(tx(item.button))} ${ICONS.external}</a><span class="contact-icon">${ICONS[item.icon]||""}</span></div>
-    </article>`).join("");
+    <a class="contact-badge" href="${item.url}" ${item.url.startsWith("mailto:") ? "" : 'target="_blank" rel="noreferrer"'}>
+      <span class="contact-badge-label">${ICONS[item.icon] || ""}${escapeHtml(item.label)}</span>
+      <span class="contact-badge-value">${escapeHtml(item.value)}</span>
+    </a>`).join("");
+  byId("contact-prompt").textContent = t("sections.contactPrompt");
+  byId("contact-location").textContent = `${t("sections.contactLocation")} · ${new Date().getFullYear()}`;
 }
 
 function renderLinks() {

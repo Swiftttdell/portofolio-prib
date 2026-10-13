@@ -3,7 +3,7 @@ const DATA = {
     name: "Fadel Muhammad",
     avatar: "img/me.webp",
     status: "Ayo Berkolaborasi",
-    email: "fadelmuh185@email.com",
+    email: "fadelmuh185@gmail.com",
     github: "https://github.com/Swiftttdell",
     instagram: "https://www.instagram.com/_swifttdell/",
     linkedin: "#",
@@ -330,59 +330,21 @@ const DATA = {
 
   contacts: [
     {
-      title: { id: "Tetap Terhubung", en: "Stay Connected" },
-      desc: {
-        id: "Hubungi saya melalui email untuk pertanyaan atau kolaborasi.",
-        en: "Reach me via email for questions or collaboration."
-      },
-      button: { id: "Pergi ke Gmail", en: "Open Gmail" },
+      label: "EMAIL",
+      value: "fadelmuh185@gmail.com",
       icon: "mail",
-      theme: "theme-red",
-      full: true,
-      url: "mailto:fadelmuh185@email.com"
+      url: "mailto:fadelmuh185@gmail.com"
     },
     {
-      title: { id: "Sisi Lain Saya", en: "My Other Side" },
-      desc: {
-        id: "Berbagi cerita, hobi, dan keluh kesah saat ngoding.",
-        en: "Sharing stories, hobbies, and complaints while coding."
-      },
-      button: { id: "Pergi ke Instagram", en: "Open Instagram" },
+      label: "INSTAGRAM",
+      value: "@_swifttdell",
       icon: "instagram",
-      theme: "theme-pink",
       url: "https://www.instagram.com/_swifttdell/"
     },
     {
-      title: { id: "Mari Terhubung", en: "Let's Connect" },
-      desc: {
-        id: "Terhubung dengan saya secara profesional.",
-        en: "Connect with me professionally."
-      },
-      button: { id: "Pergi ke Linkedin", en: "Open LinkedIn" },
-      icon: "linkedin",
-      theme: "theme-blue",
-      url: "# "
-    },
-    {
-      title: { id: "Bergabung dalam Keseruan", en: "Join the Fun" },
-      desc: {
-        id: "Tonton konten yang menarik dan menyenangkan.",
-        en: "Watch fun and engaging content."
-      },
-      button: { id: "Pergi ke Tiktok", en: "Open TikTok" },
-      icon: "music",
-      theme: "theme-gray",
-      url: "https://www.tiktok.com/@username719277"
-    },
-    {
-      title: { id: "Jelajahi Kode", en: "Explore the Code" },
-      desc: {
-        id: "Jelajahi karya sumber terbuka saya.",
-        en: "Explore my open-source work."
-      },
-      button: { id: "Pergi ke Github", en: "Open GitHub" },
+      label: "GITHUB",
+      value: "Swiftttdell",
       icon: "github",
-      theme: "theme-navy",
       url: "https://github.com/Swiftttdell"
     }
   ],
