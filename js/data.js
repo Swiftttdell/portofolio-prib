@@ -132,8 +132,8 @@ const DATA = {
     ],
     items: [
       {
-        slug: "fadel-my-id",
-        title: "Fadel.my.id — Personal Portfolio",
+        slug: "Fadel",
+        title: "Fadel — Personal Portfolio",
         desc: {
           id: "Website portofolio pribadi yang menampilkan profil, keahlian, pencapaian, proyek, dan musik favorit.",
           en: "A personal portfolio website featuring my profile, skills, achievements, projects, and favorite music."
@@ -144,7 +144,7 @@ const DATA = {
         featured: true,
         tech: ["HTML", "CSS", "JavaScript", "Vercel"],
         links: [
-          { label: "Live Demo", url: "https://fadel.my.id" },
+          { label: "Live Demo", url: "#" },
           { label: "GitHub Source", url: "https://github.com/fm5355138-pixel/pribadi" }
         ],
         github_raw: "fm5355138-pixel/pribadi"
